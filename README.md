@@ -8,7 +8,24 @@ Bu class ile kelimeleri veritabanınızdaki veri ambarı modeli ile tuttuğunuz 
 ## Teknoloji
 - PHP
 
+## Kullanım
+```php
+$lang = new Lang();
+
+$lang->Translate("LOGIN");
+$lang->Translate("USERNAME");
+$lang->Translate("PASSWORD");
+```
 
 
+## Tablo
+```php
+CREATE TABLE `language` (
+  `ID` int(11) NOT NULL,
+  `FIELD` text COLLATE utf8_turkish_ci NOT NULL,
+  `TR` text COLLATE utf8_turkish_ci NOT NULL,
+  `EN` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+```
 
 
