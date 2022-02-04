@@ -1,14 +1,14 @@
-# PHP Dil Desteği Classı
+# PHP Language Translate Class
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](#)
 
 
-Bu class ile kelimeleri veritabanınızdaki veri ambarı modeli ile tuttuğunuz çeviri tablonuzdan çevirerek ekrana yazdırabilirsiniz. Bu class özellikle sayfa ilk yüklendiğinde tablodaki çevirileri yükler, sayfa içinde kullandığınız her seferinde db tekrar tekrar bağlanmaz. 
+With this class, you can print your data warehouse model in your system by converting it from your sizing table. When this class is first loaded, the translations in the table can be used repeatedly in the db for reuse within the page.
 
-## Teknoloji
+## Tech
 - PHP
 
-## Kullanım
+## Usage
 ```php
 $lang = new Lang();
 
@@ -18,7 +18,7 @@ $lang->Translate("PASSWORD");
 ```
 
 
-## Tablo
+## DB Table
 ```php
 CREATE TABLE `language` (
   `ID` int(11) NOT NULL,
