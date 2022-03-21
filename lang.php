@@ -13,8 +13,7 @@ class Lang {
             $sql->execute();
             while($print = $sql->fetch(PDO::FETCH_ASSOC))
             {
-                $field = array($print["FIELD"] => $print[$lang]); 
-                array_push($table, $field);
+                $table[$print["FIELD"]] = $print[$lang];
             }
             return $table;
         } else {
@@ -25,17 +24,15 @@ class Lang {
     public function Translate($translate)
     {
         $table = $this->Language();
-        foreach($table as $fields) {
-            echo $fields[$translate];
-        }
+    	return $table[$translate];
     }
 }
 
 $lang = new Lang();
 
-$lang->Translate("LOGIN");
-$lang->Translate("USERNAME");
-$lang->Translate("PASSWORD");
+echo $lang->Translate("LOGIN");
+echo $lang->Translate("USERNAME");
+echo $lang->Translate("PASSWORD");
 
 ?>
 
