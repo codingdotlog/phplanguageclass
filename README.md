@@ -12,9 +12,9 @@ With this class, you can print your data warehouse model in your system by conve
 ```php
 $lang = new Lang();
 
-$lang->Translate("LOGIN");
-$lang->Translate("USERNAME");
-$lang->Translate("PASSWORD");
+echo $lang->Translate("LOGIN");
+echo $lang->Translate("USERNAME");
+echo $lang->Translate("PASSWORD");
 ```
 
 
